@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
 import { TaskType } from "../types/task-type"
-import { FC } from "react"
+import { FC, useMemo } from "react"
 import { TaskListItem } from "./TaskListItem"
 import {     
     toggleCheckedIndicator,
@@ -26,11 +26,21 @@ export const TaskList : FC= () => {
         }
     }
 
+    const generateKey = (task: TaskType) : string => `${task.checked ? '1' : '0'}-${String(task.index).padStart(5,"0")}`
+    const orderedTaskList : Array<TaskType> = useMemo(
+        () => [...taskList].sort(
+            (firstElement, secondElement) => {                
+                return generateKey(firstElement).localeCompare(generateKey(secondElement))
+            }
+        ),
+        [taskList]
+    )
+
     return (
         <div>
             { 
                 taskList.length
-                ? taskList.map((task : TaskType) => (<TaskListItem task={task} taskHandler={taskHandler(task.index)} key={task.index}/>))
+                ? orderedTaskList.map((task : TaskType) => (<TaskListItem task={task} taskHandler={taskHandler(task.index)} key={task.index}/>))
                 : (<TAlert>Não há tarefas cadastradas.</TAlert>)
             }
         </div>
