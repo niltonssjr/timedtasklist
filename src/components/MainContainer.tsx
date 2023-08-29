@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Card } from './baseComponents/Card'
 
@@ -12,20 +12,19 @@ const ContainerTag = styled.div`
 const Pane = styled(Card)`
     height: calc(100vh - 20px);
 `
-
-interface ContainerProps {
-    leftPane: FC,
-    rightPane: FC
+interface Props {
+    children: React.ReactNode[]
 }
 
-export const MainContainer : FC<ContainerProps> = ({ leftPane: LeftPane, rightPane: RightPane }) => {
+export const MainContainer : FC<Props> = ({ children }) => {
+    const [leftPane, rightPane ] = children
     return (
         <ContainerTag>
             <Pane>
-                <LeftPane/>
+                {leftPane}
             </Pane>
             <Pane>
-                <RightPane/>
+                {rightPane}
             </Pane>
         </ContainerTag>
     )

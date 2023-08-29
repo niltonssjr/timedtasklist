@@ -5,7 +5,10 @@ import { StandardTaskList } from "./components/StandardTaskList";
 function App() {  
   return (
     <div className="App">
-        <MainContainer leftPane={DailySchedule} rightPane={StandardTaskList} />
+        <MainContainer>
+          <DailySchedule/>
+          <StandardTaskList />
+        </MainContainer>
     </div>
   );
 }
