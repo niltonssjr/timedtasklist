@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Header1 = styled.h1`
+export const THeader1 = styled.h1`
     margin: 0px;
     margin-bottom: 20px;
     color: var(--dark-color);
@@ -8,11 +8,10 @@ export const Header1 = styled.h1`
     font-weight: 700;
 `
 
-export const Header2 = styled.h2`
+export const THeader2 = styled.h2`
     margin: 0px;
     margin-bottom: 10px;
     color: var(--dark-color);
     font-size: 1.4rem;
     font-weight: 700;
 `
-

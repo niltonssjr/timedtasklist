@@ -6,7 +6,7 @@ import {
     toggleCheckedIndicator,
     deleteTask
 } from "../features/task/task"
-import { TAlert } from "./baseComponents/TAlert"
+import { TAlert } from "./theme-components"
 
 export const TaskList : FC= () => {
     const taskFeature = useSelector((state: any) => state.task.value)

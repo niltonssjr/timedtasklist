@@ -1,6 +1,8 @@
 import styled from 'styled-components'
-import { InputText } from './baseComponents/InputText'
-import { TSquareButton } from './baseComponents/TSquareButton'
+import { 
+    TInputText, 
+    TSquareButton
+} from './theme-components'
 import { addTask } from '../features/task/task'
 import { useDispatch } from 'react-redux'
 import { FC, useRef } from 'react'
@@ -24,7 +26,7 @@ export const TaskEditor : FC = () => {
     }
     return (
         <Container>
-            <InputText ref={inputRef}/>
+            <TInputText ref={inputRef}/>
             <TSquareButton variant='primary' onClick={ () => addTaskToList() }>+</TSquareButton>
         </Container>
     )

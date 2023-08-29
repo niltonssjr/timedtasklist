@@ -1,12 +1,12 @@
 import { DailyScheduleTaskList } from "./DailyScheduleTaskList"
-import { Header2 } from "./baseComponents"
-import { ScrollableContainer } from "./baseComponents/ScrollableContainer"
-import { VerticalContainerWithTitle } from "./baseComponents/VerticalContainerWithTitle"
+import { THeader2 } from "./theme-components"
+import { ScrollableContainer } from "./common-components/ScrollableContainer"
+import { VerticalContainerWithTitle } from "./common-components/VerticalContainerWithTitle"
 
 export const DailySchedule = () => {
     return (
         <VerticalContainerWithTitle>
-            <Header2>Agenda do dia</Header2>
+            <THeader2>Agenda do dia</THeader2>
             <ScrollableContainer>
                 <DailyScheduleTaskList/>
             </ScrollableContainer>             

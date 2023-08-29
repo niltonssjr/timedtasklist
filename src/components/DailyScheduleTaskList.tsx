@@ -3,7 +3,7 @@ import { TaskType } from "../types/task-type"
 import { FC, useMemo } from "react"
 import { TaskListItem } from "./TaskListItem"
 import { toggleCheckedIndicator, deleteTask } from "../features/task/task"
-import { TAlert } from "./baseComponents/TAlert"
+import { TAlert } from "./theme-components"
 
 export const DailyScheduleTaskList : FC= () => {
     const taskFeature = useSelector((state: any) => state.task.value)

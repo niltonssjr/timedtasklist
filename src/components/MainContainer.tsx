@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { Card } from './baseComponents/Card'
+import { TCard } from './theme-components'
 
 const ContainerTag = styled.div`
     padding: 10px;
@@ -9,7 +9,7 @@ const ContainerTag = styled.div`
     grid-gap: 15px;
 `
 
-const Pane = styled(Card)`
+const Pane = styled(TCard)`
     height: calc(100vh - 20px);
 `
 interface Props {

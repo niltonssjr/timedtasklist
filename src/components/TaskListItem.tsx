@@ -1,9 +1,11 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 import { TaskType } from '../types/task-type'
-import { InputCheckBox } from './baseComponents/InputCheckBox'
+import { 
+    TDeleteButton,
+    TInputCheckBox 
+} from './theme-components'
 import { TaskListItemText } from './TaskListItemText'
-import { DeleteButton } from './baseComponents/DeleteButton'
 
 const TagCard = styled.div`
     box-sizing: border-box;
@@ -38,12 +40,12 @@ export const TaskListItem : FC<PropType> = ( {task, taskHandler = () => {}},  ) 
     return (
         <TagCard>
             <div>
-                <InputCheckBox value={task.checked} onChange={(e) => {
+                <TInputCheckBox value={task.checked} onChange={(e) => {
                     toggleChecked(e.target.checked)
                 }}/>
                 <TaskListItemText text={task.text} checked={task.checked} />
             </div>
-            <DeleteButton onDelete={deleteItem} />
+            <TDeleteButton onDelete={deleteItem} />
         </TagCard>
     )
 }

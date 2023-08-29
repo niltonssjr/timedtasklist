@@ -1,13 +1,13 @@
 import { TaskEditor } from "./TaskEditor"
 import { TaskList } from "./TaskList"
-import { Header2 } from "./baseComponents"
-import { ScrollableContainer } from "./baseComponents/ScrollableContainer"
-import { VerticalContainerWithTitle } from "./baseComponents/VerticalContainerWithTitle"
+import { THeader2 } from "./theme-components"
+import { ScrollableContainer } from "./common-components/ScrollableContainer"
+import { VerticalContainerWithTitle } from "./common-components/VerticalContainerWithTitle"
 
 export const StandardTaskList = () => {
     return (
         <VerticalContainerWithTitle>
-            <Header2>Tarefas</Header2>
+            <THeader2>Tarefas</THeader2>
             <TaskEditor />
             <ScrollableContainer>
                 <TaskList/>

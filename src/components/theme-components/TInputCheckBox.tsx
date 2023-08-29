@@ -67,7 +67,7 @@ interface CheckProps {
     value: boolean,
     onChange: ChangeEventHandler<HTMLInputElement>
 }
-export const InputCheckBox : FC<CheckProps> = (props) => {
+export const TInputCheckBox : FC<CheckProps> = (props) => {
     return (
         <>
             <CheckTag className="container">
