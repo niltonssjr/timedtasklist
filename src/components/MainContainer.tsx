@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { TCard } from './theme-components'
+import { TCard } from './theme'
 
 const ContainerTag = styled.div`
     padding: 10px;

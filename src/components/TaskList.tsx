@@ -6,7 +6,8 @@ import {
     toggleCheckedIndicator,
     deleteTask
 } from "../features/task/task"
-import { TAlert } from "./theme-components"
+import { TAlert } from "./theme"
+import { TagListItemCard } from "./common/TaskListItemCard"
 
 export const TaskList : FC= () => {
     const taskFeature = useSelector((state: any) => state.task.value)
@@ -40,8 +41,13 @@ export const TaskList : FC= () => {
         <div>
             { 
                 taskList.length
-                ? orderedTaskList.map((task : TaskType) => (<TaskListItem task={task} taskHandler={taskHandler(task.index)} key={task.index}/>))
+                ? orderedTaskList.map((task : TaskType) => (
+                    <TagListItemCard>
+                        <TaskListItem task={task} taskHandler={taskHandler(task.index)} key={task.index}/>
+                    </TagListItemCard>
+                ))
                 : (<TAlert>Não há tarefas cadastradas.</TAlert>)
+                
             }
         </div>
     )

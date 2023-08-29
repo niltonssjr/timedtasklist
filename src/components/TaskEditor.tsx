@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { 
     TInputText, 
     TSquareButton
-} from './theme-components'
+} from './theme'
 import { addTask } from '../features/task/task'
 import { useDispatch } from 'react-redux'
 import { FC, useRef } from 'react'

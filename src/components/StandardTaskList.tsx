@@ -1,8 +1,8 @@
 import { TaskEditor } from "./TaskEditor"
 import { TaskList } from "./TaskList"
-import { THeader2 } from "./theme-components"
-import { ScrollableContainer } from "./common-components/ScrollableContainer"
-import { VerticalContainerWithTitle } from "./common-components/VerticalContainerWithTitle"
+import { THeader2 } from "./theme"
+import { ScrollableContainer } from "./common/ScrollableContainer"
+import { VerticalContainerWithTitle } from "./common/VerticalContainerWithTitle"
 
 export const StandardTaskList = () => {
     return (

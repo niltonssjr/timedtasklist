@@ -3,7 +3,8 @@ import { TaskType } from "../types/task-type"
 import { FC, useMemo } from "react"
 import { TaskListItem } from "./TaskListItem"
 import { toggleCheckedIndicator, deleteTask } from "../features/task/task"
-import { TAlert } from "./theme-components"
+import { TAlert } from "./theme"
+import { TagListItemCard } from "./common/TaskListItemCard"
 
 export const DailyScheduleTaskList : FC= () => {
     const taskFeature = useSelector((state: any) => state.task.value)
@@ -32,7 +33,11 @@ export const DailyScheduleTaskList : FC= () => {
                 { 
                     pendingTasks.length
                     ? pendingTasks
-                    .map((task : TaskType) => (<TaskListItem task={task} taskHandler={taskHandler(task.index)} key={task.index}/>))
+                    .map((task : TaskType) => (
+                        <TagListItemCard>
+                            <TaskListItem task={task} taskHandler={taskHandler(task.index)} key={task.index}/>
+                        </TagListItemCard>
+                    ))
                     : (<TAlert>Não há tarefas pendentes no momento</TAlert>)
                 }
         </div>

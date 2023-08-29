@@ -4,18 +4,10 @@ import { TaskType } from '../types/task-type'
 import { 
     TDeleteButton,
     TInputCheckBox 
-} from './theme-components'
+} from './theme'
 import { TaskListItemText } from './TaskListItemText'
 
 const TagCard = styled.div`
-    box-sizing: border-box;
-    width: 98%;
-    border-left: 5px solid var(--primary-color);
-    padding: 10px;
-    font-size: 1rem;
-    color: var(--standard-font-color);
-    margin: 10px 0px;
-    box-shadow: 0px 0px 18px 5px #e8eaed;
     display: flex;
     gap: 10px;
     justify-content: space-between;
