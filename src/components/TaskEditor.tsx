@@ -13,7 +13,6 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    input { flex: 1 };
 `
 export const TaskEditor : FC = () => {
     const inputRef = useRef<HTMLInputElement>(null)
@@ -26,7 +25,7 @@ export const TaskEditor : FC = () => {
     }
     return (
         <Container>
-            <TInputText ref={inputRef}/>
+            <TInputText full ref={inputRef}/>
             <TSquareButton variant='primary' onClick={ () => addTaskToList() }>+</TSquareButton>
         </Container>
     )
