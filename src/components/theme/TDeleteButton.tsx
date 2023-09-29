@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, MouseEventHandler } from "react"
 import styled from 'styled-components';
 
 const TDeleteButtonTag = styled.span`
@@ -6,11 +6,11 @@ const TDeleteButtonTag = styled.span`
     font-weight: 500;
 `
 interface PropType {
-    onDelete : () => void
+    onDelete : MouseEventHandler
 }
 
-export const TDeleteButton : FC<PropType> = ({ onDelete }) => {
+export const TDeleteButton : FC<PropType> = ({ onDelete, ...otherParameters }) => {
     return (
-        <TDeleteButtonTag onClick={onDelete} title="Apagar">x</TDeleteButtonTag>
+        <TDeleteButtonTag onClick={onDelete} title="Apagar" {...otherParameters}>x</TDeleteButtonTag>
     )
 }
