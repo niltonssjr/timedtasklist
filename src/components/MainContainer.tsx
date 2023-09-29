@@ -3,14 +3,17 @@ import styled from 'styled-components'
 import { TCard } from './theme'
 
 const ContainerTag = styled.div`
+    box-sizing: border-box;    
+    height: 100vh;
+    width: 100vw;
     padding: 10px;
     display: grid;
-    grid-template-columns: 56.5% 40%;
+    grid-template-columns: 3fr 2fr;
     grid-gap: 15px;
 `
 
 const Pane = styled(TCard)`
-    height: calc(100vh - 20px);
+    height: 100%;
 `
 interface Props {
     children: React.ReactNode[]
